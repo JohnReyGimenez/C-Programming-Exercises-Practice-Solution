@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 int rotateByOne(int n, int arr[], int size) {
-    int last = arr[size - 1];
+    int first = arr[0];
 
-    for (int i = size - 1; i > 0; i--) {
-        arr[i] = arr[i - 1];
+    for (int i = 0; i < size - 1; i++) {
+        arr[i] = arr[i + 1];
     }
 
-    arr[0] = last;
+    arr[size - 1] = first;
     
     return arr[size];
 }
